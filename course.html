@@ -54,6 +54,21 @@
             display: block;
             margin: 30px auto;
         }
+        .links {
+            margin-top: 30px;
+            padding: 15px;
+            background-color: #eef;
+            border-left: 5px solid #88f;
+        }
+        .links a {
+            display: block;
+            margin-bottom: 10px;
+            color: #0044cc;
+            text-decoration: none;
+        }
+        .links a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
@@ -68,6 +83,7 @@
     <button onclick="document.getElementById('task6').scrollIntoView()">06 - Who's Paying</button>
     <button onclick="document.getElementById('task7').scrollIntoView()">07 - Fibonacci</button>
     <button onclick="document.getElementById('certificate').scrollIntoView()">Сертифікат</button>
+    <button onclick="document.getElementById('links').scrollIntoView()">Посилання</button>
     <button onclick="document.getElementById('conclusion').scrollIntoView()">Висновок</button>
 </nav>
 
@@ -178,6 +194,13 @@
     <section id="certificate">
         <h2>Сертифікат</h2>
         <img src="WEB.jpg" alt="Сертифікат про проходження курсу">
+    </section>
+
+    <section id="links" class="links">
+        <h2>Корисні посилання</h2>
+        <a href="https://github.com/JOAHNLIU/web-course-tasks" target="_blank">Репозиторій на GitHub</a>
+        <a href="https://joahnliu.github.io/web-course-tasks/" target="_blank">Жива сторінка головної сторінки</a>
+        <a href="https://joahnliu.github.io/web-course-tasks/course.html" target="_blank">Жива сторінка звітного документу</a>
     </section>
 
     <section id="conclusion">
