@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Опис курсу</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <style>
+        body {
+            display: flex;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        nav {
+            width: 220px;
+            background-color: #f0f0f0;
+            padding: 20px;
+            height: 100vh;
+            box-sizing: border-box;
+            position: fixed;
+            top: 0;
+            left: 0;
+            overflow-y: auto;
+        }
+        nav button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: none;
+            background-color: #ddd;
+            cursor: pointer;
+            text-align: left;
+        }
+        nav button:hover {
+            background-color: #ccc;
+        }
+        main {
+            margin-left: 240px;
+            padding: 20px;
+            max-width: 900px;
+        }
+        section {
+            margin-bottom: 40px;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            overflow-x: auto;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 30px auto;
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <button onclick="document.getElementById('intro').scrollIntoView()">Вступ</button>
+    <button onclick="document.getElementById('task1').scrollIntoView()">01 - Variables</button>
+    <button onclick="document.getElementById('task2').scrollIntoView()">02 - Life in Weeks</button>
+    <button onclick="document.getElementById('task3').scrollIntoView()">03 - BMI Basic</button>
+    <button onclick="document.getElementById('task4').scrollIntoView()">04 - BMI Advanced</button>
+    <button onclick="document.getElementById('task5').scrollIntoView()">05 - Leap Year</button>
+    <button onclick="document.getElementById('task6').scrollIntoView()">06 - Who's Paying</button>
+    <button onclick="document.getElementById('task7').scrollIntoView()">07 - Fibonacci</button>
+    <button onclick="document.getElementById('certificate').scrollIntoView()">Сертифікат</button>
+    <button onclick="document.getElementById('conclusion').scrollIntoView()">Висновок</button>
+</nav>
+
+<main>
+    <section id="intro">
+        <h2>Вступ</h2>
+        <p>Під час проходження курсу <strong>"The Complete Full-Stack Web Development Bootcamp"</strong> на платформі Udemy я мав змогу зануритися в основи JavaScript, попрактикуватися в написанні простих алгоритмів та закріпити базові навички програмування. У цьому звіті представлено результати семи практичних завдань, що охоплюють ключові теми мови.</p>
+    </section>
+
+    <section id="task1">
+        <h2>01 - Variables</h2>
+        <pre><code>function test() {
+    var a = "3";
+    var b = "8";
+
+    var temp = a;
+    a = b;
+    b = temp;
+
+    console.log("a is " + a);
+    console.log("b is " + b);
+}</code></pre>
+    </section>
+
+    <section id="task2">
+        <h2>02 - Life in Weeks</h2>
+        <pre><code>function lifeInWeeks(age) {
+    var yearsLeft = 90 - age;
+    var daysLeft = yearsLeft * 365;
+    var weeksLeft = yearsLeft * 52;
+    var monthsLeft = yearsLeft * 12;
+
+    console.log("You have " + daysLeft + " days, " + weeksLeft + " weeks, and " + monthsLeft + " months left.");
+}</code></pre>
+    </section>
+
+    <section id="task3">
+        <h2>03 - BMI Basic</h2>
+        <pre><code>function bmiCalculator(weight, height) {
+    var bmi = weight / (height * height);
+    return Math.round(bmi);
+}</code></pre>
+    </section>
+
+    <section id="task4">
+        <h2>04 - BMI Advanced</h2>
+        <pre><code>function bmiCalculator(weight, height) {
+    var bmi = weight / (height * height);
+
+    if (bmi &lt; 18.5) {
+        return "Your BMI is " + bmi + ", so you are underweight.";
+    } else if (bmi &gt;= 18.5 &amp;&amp; bmi &lt;= 24.9) {
+        return "Your BMI is " + bmi + ", so you have a normal weight.";
+    } else {
+        return "Your BMI is " + bmi + ", so you are overweight.";
+    }
+}</code></pre>
+    </section>
+
+    <section id="task5">
+        <h2>05 - Leap Year</h2>
+        <pre><code>function isLeap(year) {
+    if (year % 4 === 0) {
+        if (year % 100 === 0) {
+            if (year % 400 === 0) {
+                console.log("Leap year.");
+            } else {
+                console.log("Not leap year.");
+            }
+        } else {
+            console.log("Leap year.");
+        }
+    } else {
+        console.log("Not leap year.");
+    }
+}</code></pre>
+    </section>
+
+    <section id="task6">
+        <h2>06 - Who's Paying</h2>
+        <pre><code>function whosPaying(names) {
+    var randomIndex = Math.floor(Math.random() * names.length);
+    var selectedPerson = names[randomIndex];
+    return selectedPerson + " is going to buy lunch today!";
+}</code></pre>
+    </section>
+
+    <section id="task7">
+        <h2>07 - Fibonacci</h2>
+        <pre><code>function fibonacciGenerator(n) {
+    var output = [];
+
+    if (n === 1) {
+        output = [0];
+    } else if (n === 2) {
+        output = [0, 1];
+    } else {
+        output = [0, 1];
+        for (var i = 2; i &lt; n; i++) {
+            output.push(output[i - 1] + output[i - 2]);
+        }
+    }
+
+    return output;
+}</code></pre>
+    </section>
+
+    <section id="certificate">
+        <h2>Сертифікат</h2>
+        <img src="WEB.jpg" alt="Сертифікат про проходження курсу">
+    </section>
+
+    <section id="conclusion">
+        <h2>Висновок</h2>
+        <p>Курс виявився дуже корисним та практично орієнтованим. Я навчився працювати з базовими елементами JavaScript, створювати прості функції, обробляти умови та масиви. Завдяки практичним задачам я зрозумів, як будуються логіка та алгоритми в реальних проектах. Це дало мені впевненість у подальшому вивченні Frontend і Backend технологій. Отриманий сертифікат став гарним підсумком моїх зусиль та ще одним кроком у розвитку як веб-розробника.</p>
+    </section>
+</main>
+
+</body>
+</html>
